@@ -28,7 +28,7 @@ class Distance:
             return NotImplemented
         return self
 
-    def __mul__(self, other: Union["Distance", int, float]) -> "Distance":
+    def __mul__(self, other: int | float) -> "Distance":
         if isinstance(other, (int, float)):
             new_km = self.km * other
         else:
